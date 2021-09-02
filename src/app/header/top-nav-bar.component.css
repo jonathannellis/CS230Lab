@@ -11,6 +11,9 @@
     border-bottom-width: 2px;
     border-color: transparent;
 }
+.badge {
+    font-size: 9px;
+}
 .dropdown-outer-container {
     display: none;
     position: absolute;
