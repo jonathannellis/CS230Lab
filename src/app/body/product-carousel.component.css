@@ -1,0 +1,21 @@
+.carousel-control-button {
+    width: 100px;
+    height: 100px;
+    border: 0px;
+}
+.carousel-control-button:hover i {
+    background-color: #F5F5F7;
+
+}
+.carousel-indicators {
+    position: absolute;
+    bottom: -50px;
+}
+.carousel-indicators button {
+    background-color: lightgray;
+    height: 8px;
+    border-radius: 15px;
+}
+.carousel-indicators button.active {
+    background-color: #0775FF;
+}
