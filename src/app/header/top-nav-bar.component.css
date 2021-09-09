@@ -1,10 +1,12 @@
 nav {
     color: #a2a5a9;
-    font-size: 14px;
+    font-size: 13px;
 }
+
 .dropdown-button {
     padding-top: 28px;
     padding-bottom: 28px;
+    font-size: 13px;
     height: 100%;
     color: gray;
     background-color: transparent;
@@ -27,6 +29,7 @@ nav {
 }
 .dropdown-inner-container {
     height: 100%;
+    font-size: 16px;
 }
 
 .nav-item:hover .dropdown-outer-container { display: block; }
