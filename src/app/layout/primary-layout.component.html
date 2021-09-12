@@ -1,6 +1,15 @@
 <!-- Site-wide layout.  Includes elements common to every "page" on this web app-->
-<app-top-social-nav-bar>Loading top social navigation bar.</app-top-social-nav-bar>
-<app-top-nav-bar>Loading top primary navigation bar.</app-top-nav-bar>
+<div class="container-fluid p-0">
+    <!-- Header (Visible on all pages)-->
+    <div class="row">
+        <app-top-social-nav-bar>Loading top social navigation bar.</app-top-social-nav-bar>
+    </div>
+    <div class="row">
+        <app-top-nav-bar>Loading top navigation bar.</app-top-nav-bar>
+    </div>
 
-<!-- Assume user is currently on landing page. Any sub-layout component can go here as user navigates app -->
-<app-home-layout>Loading home layout component.</app-home-layout>
+    <!-- Page specific content -->
+    <div class="row">
+        <app-home-layout>Loading home layout component.</app-home-layout>    
+    </div>
+</div>
