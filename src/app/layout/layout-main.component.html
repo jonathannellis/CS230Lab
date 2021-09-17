@@ -8,8 +8,12 @@
         <app-top-nav-bar>Loading top navigation bar.</app-top-nav-bar>
     </div>
 
-    <!-- Page specific content -->
+    <!-- Page specific content.  Add/remove routes in app-routing.module.ts -->
     <div class="row">
-        <app-landing-page>Loading landing page component.</app-landing-page> 
+        <router-outlet></router-outlet>
     </div>
+
+    <!-- Footer (Included on all pages) -->
+
+    <!-- Footer placeholder; not yet implmented. -->
 </div>

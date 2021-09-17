@@ -9,13 +9,18 @@ import { ProductCardComponent } from './product-card/product-card.component';
 import { TopNavBarDropdownComponent } from './header/top-nav-bar-dropdown.component';
 import { LayoutMainComponent } from './layout/layout-main.component';
 import { LandingPageComponent } from './body/landing-page.component';
+import { LoginPageComponent } from './body/login-page.component';
+import { CartPageComponent } from './body/cart-page.component';
 import { ProductCardGridFullWidthComponent } from './product-card-grid/product-card-grid-full-width.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutMainComponent,
     LandingPageComponent,
+    LoginPageComponent,
+    CartPageComponent,
     TopNavBarComponent,
     TopNavBarDropdownComponent,
     TopSocialNavBarComponent,
@@ -24,7 +29,8 @@ import { ProductCardGridFullWidthComponent } from './product-card-grid/product-c
     ProductCardGridFullWidthComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
