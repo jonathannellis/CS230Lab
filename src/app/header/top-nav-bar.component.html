@@ -7,7 +7,7 @@
         <ul class="navbar-nav me-auto">
                 <!-- Mech Keebs Section -->
                 <li class="nav-item ps-2 pe-2">
-                    <button class="dropdown-button">Mechanical Keyboards</button>
+                    <a href="#"><button class="dropdown-button">Mechanical Keyboards</button></a>
                     <div class="dropdown-outer-container container-fluid bg-white">
                         <app-top-nav-bar-dropdown></app-top-nav-bar-dropdown>
                     </div>
@@ -16,7 +16,7 @@
 
                 <!-- Keycaps Section -->
                 <li class="nav-item ps-2 pe-2">
-                    <button class="dropdown-button">Keycaps</button>
+                    <a routerLink="/category"><button class="dropdown-button">Keycaps</button></a>
                     <div class="dropdown-outer-container container-fluid bg-white">
                         <app-top-nav-bar-dropdown></app-top-nav-bar-dropdown>
                     </div>
@@ -25,7 +25,7 @@
 
                 <!-- Switches Section -->
                 <li class="nav-item ps-2 pe-2">
-                    <button class="dropdown-button">Switches</button>
+                    <a href="#"><button class="dropdown-button">Switches</button></a>
                     <div class="dropdown-outer-container container-fluid bg-white">
                         <app-top-nav-bar-dropdown></app-top-nav-bar-dropdown>
                     </div>
@@ -34,7 +34,7 @@
 
                 <!-- Extras Section -->
                 <li class="nav-item ps-2 pe-2">
-                    <button class="dropdown-button">Extras</button>
+                    <a href="#"><button class="dropdown-button">Extras</button></a>
                     <div class="dropdown-outer-container container-fluid bg-white">
                         <app-top-nav-bar-dropdown></app-top-nav-bar-dropdown>
                     </div>
@@ -43,7 +43,7 @@
 
                 <!-- Group-Buys Section -->
                 <li class="nav-item ps-2 pe-2">
-                    <button class="dropdown-button fw-lighter">Group-Buys</button>
+                    <a href="#"><button class="dropdown-button fw-lighter">Group-Buys</button></a>
                 </li>
                 <!-- End Group-Buys Section -->
         </ul>
@@ -59,10 +59,10 @@
                 <a class="nav-link link-dark" href="#"><i class="bi bi-search fs-5"></i></a>
             </li>
             <li class="nav-item mx-2">
-                <a class="nav-link link-secondary fw-light" href="#"><i class="bi bi-person link-dark fs-5"></i>  Register or Login</a>
+                <a class="nav-link link-secondary fw-light" routerLink="/login"><i class="bi bi-person link-dark fs-5"></i>  Register or Login</a>
             </li>
             <li class="nav-item ms-2">
-                <a class="nav-link link-primary link-shopping-cart fw-light" href="#">
+                <a class="nav-link link-primary link-shopping-cart fw-light" routerLink="/cart">
                     <i class="bi bi-cart3 link-dark fs-5 me-1">
                         <span class="position-absolute top-45 start-15 translate-middle badge bg-primary border rounded-pill">0</span>
                     </i>
