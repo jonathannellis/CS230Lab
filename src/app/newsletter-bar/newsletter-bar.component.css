@@ -1,3 +1,9 @@
 .newsletter-bar {
     background-image: url("/assets/images/newsletter-bar/newsletter-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 285px;
+}
+.btn {
+    z-index: 10;
 }
