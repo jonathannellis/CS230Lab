@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { TopNavBarComponent } from './header/top-nav-bar.component';
 import { TopSocialNavBarComponent } from './header/top-social-nav-bar.component';
+import { NewsletterBarComponent } from './newsletter-bar/newsletter-bar.component';
 import { ProductCarouselComponent } from './carousel/product-carousel.component';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { TopNavBarDropdownComponent } from './header/top-nav-bar-dropdown.component';
@@ -26,6 +27,7 @@ import { AppRoutingModule } from './app-routing.module';
     TopNavBarComponent,
     TopNavBarDropdownComponent,
     TopSocialNavBarComponent,
+    NewsletterBarComponent,
     ProductCarouselComponent,
     ProductCardComponent,
     ProductCardGridFullWidthComponent
