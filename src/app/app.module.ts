@@ -15,6 +15,10 @@ import { LoginPageComponent } from './body/login-page.component';
 import { CartPageComponent } from './body/cart-page.component';
 import { ProductCardGridFullWidthComponent } from './product-card-grid/product-card-grid-full-width.component';
 import { AppRoutingModule } from './app-routing.module';
+import { GroupBuyProductCardComponent } from './groupbuy-product-card/groupbuy-product-card.component';
+import { GroupBuyHighlightsComponent } from './groupbuy-highlights/groupbuy-highlights.component';
+import { BottomNavBarComponent } from './footer/bottom-nav-bar.component';
+import { BottomLogoBarComponent } from './footer/bottom-logo-bar.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { AppRoutingModule } from './app-routing.module';
     NewsletterBarComponent,
     ProductCarouselComponent,
     ProductCardComponent,
-    ProductCardGridFullWidthComponent
+    ProductCardGridFullWidthComponent,
+    GroupBuyProductCardComponent,
+    GroupBuyHighlightsComponent,
+    BottomNavBarComponent,
+    BottomLogoBarComponent
   ],
   imports: [
     BrowserModule,

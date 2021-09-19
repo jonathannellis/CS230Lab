@@ -1,0 +1,9 @@
+.progressBarIndicator {
+    height: 6px;
+}
+.progressBarText {
+    font-size: 13px;
+}
+.progressBarInactive {
+    background-color: #ececf6;
+}

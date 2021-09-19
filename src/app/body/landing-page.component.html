@@ -1,5 +1,5 @@
 <!-- Layout elements that are specific to home/landing page -->
-<div class="container-fluid">
+<div class="container-fluid p-0 m-0">
     
     <!-- Featured product carousel -->
     <div class="row pb-4">
@@ -7,12 +7,21 @@
     </div>
 
     <!-- New products header and card grid -->
-    <div class="row px-4 pt-4 pb-0">
+    <div class="row px-5 pt-4 pb-3">
         <i class="bi bi-keyboard fs-1 text-primary pb-0"></i>
         <h4 class="my-0">New products</h4>
         <p class="fs-0 my-0 fw-light">Products that just landed!</p>
     </div>
-    <div class="row">
+    <div class="row px-5 py-3">
         <app-product-card-grid-full-width>Loading product card grid.</app-product-card-grid-full-width>
     </div>
+    <div class="row px-5 py-3">
+        <app-product-card-grid-full-width>Loading product card grid.</app-product-card-grid-full-width>
+    </div>
+
+    <!-- Highlighted Group-Buys -->
+    <div class="row py-4">
+        <app-groupbuy-highlights></app-groupbuy-highlights>
+    </div>
+
 </div>

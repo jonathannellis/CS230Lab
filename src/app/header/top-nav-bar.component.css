@@ -22,7 +22,6 @@ nav {
 .dropdown-outer-container {
     display: none;
     position: absolute;
-    width: 100%;
     left: 0px;
     margin-top: 1px;
     z-index: 99;
