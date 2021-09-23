@@ -19,6 +19,7 @@ import { GroupBuyProductCardComponent } from './groupbuy-product-card/groupbuy-p
 import { GroupBuyHighlightsComponent } from './groupbuy-highlights/groupbuy-highlights.component';
 import { BottomNavBarComponent } from './footer/bottom-nav-bar.component';
 import { BottomLogoBarComponent } from './footer/bottom-logo-bar.component';
+import { KeyboardPageComponent } from './body/keyboard-page.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { BottomLogoBarComponent } from './footer/bottom-logo-bar.component';
     GroupBuyProductCardComponent,
     GroupBuyHighlightsComponent,
     BottomNavBarComponent,
-    BottomLogoBarComponent
+    BottomLogoBarComponent,
+    KeyboardPageComponent
   ],
   imports: [
     BrowserModule,
