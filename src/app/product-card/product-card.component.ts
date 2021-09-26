@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
     selector: 'app-product-card',
@@ -6,7 +6,9 @@ import { Component } from "@angular/core";
     styleUrls: ['product-card.component.css']
 })
 export class ProductCardComponent {
-    productName:string = "MW PBT 02 & 015 Deskmats";
-    productPrice:number = 23;
-    productImage:string = "https://ucarecdn.com/8b3b457f-3b2c-46eb-a29e-fa07b308b7be~4/nth/0/-/scale_crop/250x250/-/format/auto/-/quality/smart/-/resize/626x/";
+    // Default values given so that cards used previously in the semester continue to work.  If removed
+    // put an exclamation mark after attribute name.
+    @Input() productName:string = "SA Polyclear";
+    @Input() productPrice:number = 21;
+    @Input() productImage:string = "/assets/images/product/sa-polyclear.webp";
 }

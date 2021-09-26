@@ -13,7 +13,7 @@ import { LandingPageComponent } from './body/landing-page.component';
 import { CategoryPageComponent } from './body/category-page.component';
 import { LoginPageComponent } from './body/login-page.component';
 import { CartPageComponent } from './body/cart-page.component';
-import { ProductCardGridFullWidthComponent } from './product-card-grid/product-card-grid-full-width.component';
+import { NewProductCardGridComponent } from './product-card-grid/new-product-card-grid.component';
 import { AppRoutingModule } from './app-routing.module';
 import { GroupBuyProductCardComponent } from './groupbuy-product-card/groupbuy-product-card.component';
 import { GroupBuyHighlightsComponent } from './groupbuy-highlights/groupbuy-highlights.component';
@@ -35,7 +35,7 @@ import { KeyboardPageComponent } from './body/keyboard-page.component';
     NewsletterBarComponent,
     ProductCarouselComponent,
     ProductCardComponent,
-    ProductCardGridFullWidthComponent,
+    NewProductCardGridComponent,
     GroupBuyProductCardComponent,
     GroupBuyHighlightsComponent,
     BottomNavBarComponent,
