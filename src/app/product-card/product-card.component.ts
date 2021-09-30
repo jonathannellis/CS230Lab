@@ -11,4 +11,7 @@ export class ProductCardComponent {
     @Input() productName:string = "SA Polyclear";
     @Input() productPrice:number = 21;
     @Input() productImage:string = "/assets/images/product/sa-polyclear.webp";
+    @Input() productStatus:string = "Preorder";
+    @Input() productStatusColor:string = "bg-dark";
+    @Input() productStatusVisibility:string = "visible";
 }
