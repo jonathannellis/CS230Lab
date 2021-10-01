@@ -6,11 +6,10 @@
         <div class="card-body pb-0">
             <!-- Genereate graphical representation of rating -->
             <span *ngFor="let currentStar of productStars">
-                <span *ngIf="currentStar == 1"><i class="bi bi-star-fill text-warning"></i></span>
-                <span *ngIf="currentStar == 0.5"><i class="bi bi-star-half text-warning"></i></span>
-                <span *ngIf="currentStar == 0"><i class="bi bi-star text-warning"></i></span>
+                <span *ngIf="currentStar == 1"><i class="bi bi-star-fill text-warning"></i> </span>
+                <span *ngIf="currentStar == 0.5"><i class="bi bi-star-half text-warning"></i> </span>
+                <span *ngIf="currentStar == 0"><i class="bi bi-star text-warning"></i> </span>
             </span>
-            <i *ngFor="let currentStar of productStars" class="bi {{currentStar}} text-warning"></i>
             <p class="card-text fs-6 fw-light m-0">{{productName}}</p>
             <p class="text-black-50 fs-6 fw-light m-0">{{productPrice | number:'0.2-2'}} €</p>
             <p class="seeDetails fw-bold"><a class="text-decoration-none" href="#">See details <i class="bi bi-chevron-right"></i></a></p>
