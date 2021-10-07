@@ -14,5 +14,5 @@ export class ProductCardComponent {
     @Input() productStatus:string = "Preorder";
     @Input() productStatusColor:string = "bg-dark";
     @Input() productStatusVisibility:string = "visible";
-    @Input() productStars:number[] = [];
+    @Input() productStars:number[] = [0,0,0,0,0];
 }

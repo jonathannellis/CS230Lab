@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { TopNavBarComponent } from './header/top-nav-bar.component';
@@ -20,6 +21,7 @@ import { GroupBuyHighlightsComponent } from './groupbuy-highlights/groupbuy-high
 import { BottomNavBarComponent } from './footer/bottom-nav-bar.component';
 import { BottomLogoBarComponent } from './footer/bottom-logo-bar.component';
 import { KeyboardPageComponent } from './body/keyboard-page.component';
+import { UserInfoComponent } from './header/user-info.component';
 
 @NgModule({
   declarations: [
@@ -40,11 +42,13 @@ import { KeyboardPageComponent } from './body/keyboard-page.component';
     GroupBuyHighlightsComponent,
     BottomNavBarComponent,
     BottomLogoBarComponent,
-    KeyboardPageComponent
+    KeyboardPageComponent,
+    UserInfoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
