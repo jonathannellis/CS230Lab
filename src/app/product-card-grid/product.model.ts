@@ -4,8 +4,9 @@ export class Product {
     price:number;
     image:string;
     status:string;
-    statusColor:string;
-    statusVisibility:string;
+    rating:number = 0;
+    statusColor:string = "";
+    statusVisibility:string = "invisible";
     stars:number[] = [0,0,0,0,0];
 
     constructor({name, price, image, status, rating} : {name:string, price:number, image:string, status:string, rating:number}) {
@@ -13,12 +14,13 @@ export class Product {
         this.price = price;
         this.image = image;
         this.status = status;
-
-        if (status == "In stock") {
+        this.rating = rating;
+        
+        if (this.status == "In stock") {
             this.statusColor = "";
             this.statusVisibility = "invisible";
         }
-        else if (status == "Preorder") {
+        else if (this.status == "Preorder") {
             this.statusColor = "bg-dark";
             this.statusVisibility = "visible";
         }
@@ -29,13 +31,13 @@ export class Product {
 
         // Create an array containing numeric value of each star in product rating (1 = full star, 0.5 = half star, 0 = zero star)
         for (var i = 0; i < 5; i++) {
-            if (rating >= 1) {
+            if (this.rating >= 1) {
                 this.stars[i] = 1;
-                rating--;
+                this.rating--;
             }
-            else if (rating >= 0.5) {
+            else if (this.rating >= 0.5) {
                 this.stars[i] = 0.5;
-                rating = rating - 0.5;
+                this.rating = this.rating - 0.5;
             }
             else {
                 this.stars[i] = 0;
