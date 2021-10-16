@@ -20,8 +20,8 @@ export class NewProductCardGridComponent {
             /* 
                 Objects in data list are already of type Product so creating new
                 Products is not strictly necessary.  However, the Product constructor
-                doesn't seem to run on Product objects created by the NewProductService.
-                I rely on TS in the constructor so this ensures that is executed.
+                doesn't seem to ever run for Product objects saved to data.  Creating
+                new Product objects ensures that the constructor is executed.
             */
             for (var product of data) {
                 this.productsToDisplay.push(new Product(product));
