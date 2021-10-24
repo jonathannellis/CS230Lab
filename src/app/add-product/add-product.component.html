@@ -1,0 +1,86 @@
+<div class="container-fluid px-5">
+    <h5 class="border-bottom py-3">Existing Products</h5>
+    <span *ngFor="let product of productList; index as i">
+        <div *ngIf="i % 2 == 0">
+            <div class="row p-2 bg-light">
+                <div class="col">
+                    {{product.name}}
+                </div>
+                <div class="col-1">
+                    €{{product.price | number:'0.2-2'}}
+                </div>
+                <div class="col-1">
+                    {{product.status}}
+                </div>
+                <div class="col-1">
+                    {{product.rating}} stars
+                </div>
+                <div class="col">
+                    {{product.image}}
+                </div>
+            </div>
+        </div>
+        <div *ngIf="i % 2 != 0">
+            <div class="row p-2 bg-white">
+                <div class="col">
+                    {{product.name}}
+                </div>
+                <div class="col-1">
+                    €{{product.price | number:'0.2-2'}}
+                </div>
+                <div class="col-1">
+                    {{product.status}}
+                </div>
+                <div class="col-1">
+                    {{product.rating}} stars
+                </div>
+                <div class="col">
+                    {{product.image}}
+                </div>
+            </div>
+        </div>
+    </span>
+
+    <h5 class="border-bottom py-3">Add Product</h5>
+
+    <form #postForm="ngForm" (ngSubmit)="addProduct(postForm.value)">
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group mb-3">
+                    <span class="input-group-text" id="new-product-name">Product Name</span>
+                    <input type="text" class="form-control" ngModel name="name">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">€</span>
+                    <span class="input-group-text">0.00</span>
+                    <input type="text" class="form-control" ngModel name="price">
+                </div>
+        </div>
+        <div class="col-3">
+                <select class="form-select" aria-label="New product status" ngModel name="status">
+                    <option selected value="In Stock">In Stock</option>
+                    <option value="Preorder">Preorder</option>
+                    <option value="Out of stock">Out of stock</option>
+                </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="new-product-image">Product Image</span>
+                    <input type="text" class="form-control" ngModel name="image">
+                </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <button type="button" class="btn btn-success" type="submit">Add Product</button>
+        </div>
+    </div>
+    </form>
+
+</div>

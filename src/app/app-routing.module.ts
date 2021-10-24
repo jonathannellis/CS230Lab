@@ -5,6 +5,7 @@ import { LoginPageComponent } from './body/login-page.component';
 import { CartPageComponent } from './body/cart-page.component';
 import { CategoryPageComponent } from './body/category-page.component';
 import { KeyboardPageComponent } from './body/keyboard-page.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'category', component: CategoryPageComponent },
   { path: 'login', component: LoginPageComponent },
   { path: 'cart', component: CartPageComponent },
-  { path: 'keyboards', component: KeyboardPageComponent }
+  { path: 'keyboards', component: KeyboardPageComponent },
+  { path: 'manageproducts', component: AddProductComponent }
 ];
 
 

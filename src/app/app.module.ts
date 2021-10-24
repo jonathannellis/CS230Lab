@@ -22,6 +22,8 @@ import { BottomNavBarComponent } from './footer/bottom-nav-bar.component';
 import { BottomLogoBarComponent } from './footer/bottom-logo-bar.component';
 import { KeyboardPageComponent } from './body/keyboard-page.component';
 import { UserInfoComponent } from './header/user-info.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -43,12 +45,14 @@ import { UserInfoComponent } from './header/user-info.component';
     BottomNavBarComponent,
     BottomLogoBarComponent,
     KeyboardPageComponent,
-    UserInfoComponent
+    UserInfoComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

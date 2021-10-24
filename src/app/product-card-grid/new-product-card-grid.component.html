@@ -1,17 +1,11 @@
-<div class="d-flex flex-wrap justify-content-between">
-        <!-- Loop to create a new product card for every product in productsToDisplay -->
-        <div *ngFor="let currentProduct of productsToDisplay">
-            <div class="productCard pb-4">
-                <app-product-card 
-                    [productName]=currentProduct.name 
-                    [productPrice]=currentProduct.price 
-                    [productImage]=currentProduct.image 
-                    [productStatus]=currentProduct.status 
-                    [productStatusColor]=currentProduct.statusColor
-                    [productStatusVisibility]=currentProduct.statusVisibility
-                    [productStars]=currentProduct.stars>
-                Loading product card
-                </app-product-card>
-            </div>
-        </div>
+<div class="d-flex flex-wrap justify-content-left">
+    <!-- Loop to create a new product card for every product in productsToDisplay -->
+    <div *ngFor="let currentProduct of productsToDisplay" class="productCard pb-4 px-3">
+        <app-product-card [productName]=currentProduct.name [productPrice]=currentProduct.price
+            [productImage]=currentProduct.image [productStatus]=currentProduct.status
+            [productStatusColor]=currentProduct.statusColor [productStatusVisibility]=currentProduct.statusVisibility
+            [productStars]=currentProduct.stars>
+            Loading product card
+        </app-product-card>
+    </div>
 </div>

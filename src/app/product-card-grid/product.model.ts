@@ -29,15 +29,16 @@ export class Product {
             this.statusVisibility = "visible";
         }
 
+        var remainingStars = this.rating;
         // Create an array containing numeric value of each star in product rating (1 = full star, 0.5 = half star, 0 = zero star)
         for (var i = 0; i < 5; i++) {
-            if (this.rating >= 1) {
+            if (remainingStars >= 1) {
                 this.stars[i] = 1;
-                this.rating--;
+                remainingStars--;
             }
-            else if (this.rating >= 0.5) {
+            else if (remainingStars >= 0.5) {
                 this.stars[i] = 0.5;
-                this.rating = this.rating - 0.5;
+                remainingStars = remainingStars - 0.5;
             }
             else {
                 this.stars[i] = 0;
