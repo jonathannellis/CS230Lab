@@ -102,6 +102,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "CandyKeys:build:production",
+            "firebaseProject": "candykeys-app",
+            "firebaseHostingSite": "candykeys-app"
+          }
         }
       }
     }

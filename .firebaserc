@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "candykeys-app": {
+      "hosting": {
+        "CandyKeys": [
+          "candykeys-app"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "candykeys-app"
+  }
+}
