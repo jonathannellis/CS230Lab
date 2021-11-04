@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { NewProductsService } from "../product-card-grid/new-products.service";
 import { Product } from "../product-card-grid/product.model";
+import { DatabaseService } from "../product-card-grid/database.sevice";
 
 
 @Component({
@@ -10,7 +11,7 @@ import { Product } from "../product-card-grid/product.model";
 export class AddProductComponent {
     productList: Product[] = [];
 
-    constructor(private newProductsService: NewProductsService) {
+    constructor(private databaseService:DatabaseService) {
 
     }
 
@@ -20,22 +21,22 @@ export class AddProductComponent {
 
 
     getProductList() : void {
-        this.newProductsService.getNewProducts().subscribe((data:Product[]) => {
+        this.databaseService.getNewProducts().subscribe((data:Product[]) => {
             this.productList = [];
+            
             for (var product of data) {
+                // Creating new product guarantees constructor is run for each product.
                 this.productList.push(new Product(product));
             }
         });
+
     }
 
     addProduct(data:Product) {
-        // Default Initial Rating
+        // Initialize new rating.
         data.rating = 0;
         
-        // Submit product at first empty index.
-        this.newProductsService.putNewProduct(data, this.productList.length).subscribe(data => {
-            if (data != undefined)
-                this.productList[this.productList.length] = data;
-        });
+        // Push to backend database.
+        this.databaseService.putNewProduct(data);
     }
 }

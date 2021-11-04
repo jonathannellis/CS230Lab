@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { Product } from "./product.model";
 import { NewProductsService } from "./new-products.service";
+import { DatabaseService } from "./database.sevice";
 
 @Component({
     selector: 'app-new-product-card-grid',
@@ -11,7 +12,7 @@ export class NewProductCardGridComponent {
     // List to hold all new products that will be displayed on homepage.
     productsToDisplay:Product[] = [];
 
-    constructor(private newProductsService: NewProductsService) {
+    constructor(private newProductsService: DatabaseService) {
 
     }
 
