@@ -1,5 +1,4 @@
 import { Component } from "@angular/core";
-import { NewProductsService } from "../product-card-grid/new-products.service";
 import { Product } from "../product-card-grid/product.model";
 import { DatabaseService } from "../product-card-grid/database.sevice";
 
@@ -23,7 +22,7 @@ export class AddProductComponent {
     getProductList() : void {
         this.databaseService.getNewProducts().subscribe((data:Product[]) => {
             this.productList = [];
-            
+
             for (var product of data) {
                 // Creating new product guarantees constructor is run for each product.
                 this.productList.push(new Product(product));
