@@ -1,0 +1,22 @@
+<form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+    <div class="d-flex flex-row">
+        <div class="input-group">
+            <span class="input-group-text" id="addon-wrapping">E-Mail</span>
+            <input type="text" class="form-control" placeholder="E-Mail" ngModel name="email" required email>
+        </div>
+    </div>
+    <div class="d-flex flex-row py-3">
+        <div class="input-group">
+            <span class="input-group-text" id="addon-wrapping">Password</span>
+            <input type="password" class="form-control" placeholder="Password" ngModel name="password" required password minlength="8">
+        </div>
+    </div>
+    <div class="d-flex flex-row justify-content-left pb-1">
+        <div>
+            <button type="button" class="btn btn-primary me-3" type="submit" [disabled]="!authForm.valid">Register</button>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary" type="submit" [disabled]="!authForm.valid">Login</button>
+        </div>
+    </div>
+</form>
