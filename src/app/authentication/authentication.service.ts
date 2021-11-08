@@ -10,7 +10,7 @@ import { AuthenticationResponse } from "./authentication-response";
 export class AuthenticationService {
     private baseURL:string = "https://identitytoolkit.googleapis.com/v1/accounts";
     private signUpEndpoint:string = "signUp";
-    private signInEndpoint:string = "";
+    private logInEndpoint:string = "signInWithPassword";
 
     public constructor(private http:HttpClient) {
 
@@ -23,10 +23,21 @@ export class AuthenticationService {
             "password":password,
             "returnSecureToken":true
         }
-        return this.http.post<AuthenticationResponse>(this.baseURL + ":" + this.signUpEndpoint + "?key=" + environment.firebase.apiKey, requestBody);
+        return this.http.post<AuthenticationResponse>(
+            this.baseURL + ":" + this.signUpEndpoint + "?key=" + environment.firebase.apiKey, 
+            requestBody
+        );
     }
 
     public login(email:string, password:string) {
-
+        const requestBody = {
+            "email":email,
+            "password":password,
+            "returnSecureToken":true
+        }
+        return this.http.post<AuthenticationResponse>(
+            this.baseURL + ":" + this.logInEndpoint + "?key=" + environment.firebase.apiKey, 
+            requestBody
+        );
     }
 }

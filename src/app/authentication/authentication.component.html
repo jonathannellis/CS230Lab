@@ -13,10 +13,13 @@
     </div>
     <div class="d-flex flex-row justify-content-left pb-1">
         <div>
-            <button type="button" class="btn btn-primary me-3" type="submit" [disabled]="!authForm.valid">Sign Up</button>
+            <button type="button" class="btn btn-primary me-3" type="submit" [disabled]="!authForm.valid" (click)="buttonClicked='signup'">Sign Up</button>
         </div>
         <div>
-            <button type="button" class="btn btn-primary" type="submit" [disabled]="!authForm.valid">Login</button>
+            <button type="button" class="btn btn-primary" type="submit" [disabled]="!authForm.valid" (click)="buttonClicked='login'">Login</button>
         </div>
+    </div>
+    <div *ngIf="loginMsg != undefined" class="d-flex flex-row justify-content-left pb-1">
+        {{loginMsg}}
     </div>
 </form>
